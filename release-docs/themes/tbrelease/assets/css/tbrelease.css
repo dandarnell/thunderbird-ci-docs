@@ -47,6 +47,10 @@ iframe.release-dashboard {
     border: none;
 }
 
+main {
+    margin: 1em;
+}
+
 main.no-padding {
     padding-left: 0;
     padding-right: 0;
