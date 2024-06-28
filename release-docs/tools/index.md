@@ -40,7 +40,7 @@ NeedInfo in Bugzilla to make sure it gets considered for inclusion.**
     - Bugs approved for Beta uplift that were missed
 
 
-## Thunderbird 128.x
+## Thunderbird 128esr
 
 * [Uplifts Requested](buglist/?channel=esr128&query=uplifts-requested)
 * [Uplifts Approved](buglist/?channel=esr128&query=uplifts-approved)

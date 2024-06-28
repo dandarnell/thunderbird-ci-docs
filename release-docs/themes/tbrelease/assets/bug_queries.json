@@ -185,7 +185,7 @@
       "next_version_url": "https://hg.mozilla.org/releases/comm-esr128/raw-file/tip/mail/config/version_display.txt",
       "queries": {
         "uplifts-requested": {
-          "description": "Thunderbird 128 - Uplifts Requested",
+          "description": "Thunderbird 128esr - Uplifts Requested",
           "fetch_cols": [
             "id",
             "summary",
@@ -220,7 +220,7 @@
           }
         },
         "uplifts-approved": {
-          "description": "Thunderbird 128 - Uplifts Approved",
+          "description": "Thunderbird 128esr - Uplifts Approved",
           "fetch_cols": [
             "id",
             "summary",
