@@ -413,7 +413,7 @@ export default class BZQueryRunner {
    * @param {URL} query_url URL to fetch.
    */
   renderTable(query_url) {
-    const bugzilla_link = this.getBugzillaURL().href
+    const _me = this
     this.$table = $(this._tableId).bootstrapTable({
       columns: this.queryColumns,
       url: query_url.href,
@@ -426,6 +426,7 @@ export default class BZQueryRunner {
         return res["bugs"]
       },
       onLoadSuccess: function (data, status, xhr) {
+        const bugzilla_link = _me.getBugzillaURL().href
         $("#open_bugzilla").data("href", bugzilla_link)
         $("#get_data").data("href", query_url.href)
         $("#bug_count").text(`Bug count: ${data.length}`)
