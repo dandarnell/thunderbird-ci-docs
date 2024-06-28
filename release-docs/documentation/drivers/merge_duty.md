@@ -117,8 +117,7 @@ calendar](https://calendar.google.com/calendar/embed?src=bW96aWxsYS5jb21fZGJxODR
 
 1. Email [thunderbird-drivers](mailto:thunderbird-drivers@mozilla.org)  that the merge is beginning using the
    template.
-1. [Close
-   comm-beta](https://treestatus.mozilla-releng.net/static/ui/treestatus/show/comm-beta).
+1. Close comm-beta in [Treestatus](https://lando.services.mozilla.com/treestatus/).
    Check *“Remember this change to undo later”*. Please enter a good
    message as the reason for the closure, such as “Mergeduty - closing
    beta for \$VERSION RC week”.
@@ -163,7 +162,7 @@ to mozilla-beta.
 
 1. Email [thunderbird-drivers](mailto:thunderbird-drivers@mozilla.org) and [tb-sheriffs](mailto:sheriffs@thunderbird.net)
    that the merge is beginning using the template.
-2. Close `comm-central` in [TreeStatus](https://treestatus.mozilla-releng.net/static/ui/treestatus/show/comm-central).
+2. Close `comm-central` in [TreeStatus](https://lando.services.mozilla.com/treestatus/).
 1. Run the `comm-central -> comm-beta` [no-op trial
    run](#do-migration-no-op-trial-runs) one more time, and verify the diff looks
    correct.
@@ -202,7 +201,7 @@ push: true
 
 ### Re-opening beta
 
-[Restore comm-beta tree](https://treestatus.mozilla-releng.net/static/ui/treestatus/show/comm-beta)
+Restore comm-beta tree in [TreeStatus](https://lando.services.mozilla.com/treestatus/)
 to its previous state (`approval-required`) so that **l10n bumper can run**.
 
 

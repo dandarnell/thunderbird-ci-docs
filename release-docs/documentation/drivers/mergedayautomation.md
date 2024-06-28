@@ -34,7 +34,7 @@ Make sure you are logged into Treeherder. You will need to have
 [Taskcluster](https://hg.mozilla.org/ci/ci-configuration/file/1d37a3cf95a4e272eeaa7a910193e58ff2028646/grants.yml#l2415).
 
 Close the `comm-central` and `comm-beta` trees in
-[TreeStatus](https://treestatus.mozilla-releng.net/).
+[TreeStatus](https://lando.services.mozilla.com/treestatus/).
 
 ## comm-central -> comm-beta
 
