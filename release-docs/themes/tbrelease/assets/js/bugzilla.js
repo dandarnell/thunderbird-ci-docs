@@ -37,7 +37,7 @@ const ColumnMap = {
 export default class BZQueryRunner {
   constructor(tableId) {
     this._validInputs = {
-      channel_name: ["esr115", "beta", "nightly"],
+      channel_name: ["esr128", "esr115", "release", "beta", "nightly"],
       query_name: [
         "uplifts-requested",
         "uplifts-approved",
@@ -226,6 +226,7 @@ export default class BZQueryRunner {
    */
   fixQueryVersions(bugzilla_version, nightly_version) {
     const old_beta = (Number(bugzilla_version) - 1).toString(10)
+    const next_milestone = (Number(bugzilla_version) +1).toString(10)
     let fc = this.fetchColumns
     let qp = this.queryParams
     const ignore_params = ["include_fields", "classification", "product"]
@@ -243,6 +244,9 @@ export default class BZQueryRunner {
         }
         if (value.includes("%NIGHTLY%")) {
           this.setQueryParam(param, value.replace("%NIGHTLY%", nightly_version))
+        }
+        if (value.includes("%NEXT_MILESTONE%")) {
+          this.setQueryParam(param, value.replace("%NEXT_MILESTONE%", next_milestone))
         }
         if (value.includes("%OLDBETA%")) {
           this.setQueryParam(param, value.replace("%OLDBETA%", old_beta))
@@ -351,7 +355,7 @@ export default class BZQueryRunner {
     if (current_version !== undefined && nightly_major !== undefined) {
       if (this.channel_name.startsWith("esr")) {
         bugzilla_version = this.channel_name
-      } else if (this.channel_name === "beta") {
+      } else if (this.channel_name === "beta" || this.channel_name === "release") {
         bugzilla_version = current_version.major_version.toString()
       }
       if (bugzilla_version !== null) {

@@ -13,6 +13,13 @@ or *Approved* lists.
 or Approved lists, contact one of the release drivers via Matrix or 
 NeedInfo in Bugzilla to make sure it gets considered for inclusion.**
 
+## Thunderbird Monthly Release
+
+* [Uplifts Requested](buglist/?channel=release&query=uplifts-requested)
+    - Bugs under consideration for release uplift.
+* [Uplifts Approved](buglist/?channel=release&query=uplifts-approved)
+    - Bugs approved for release uplift.
+
 ## Thunderbird Beta
 
 * [Uplifts Requested](buglist/?channel=beta&query=uplifts-requested)
@@ -32,6 +39,13 @@ NeedInfo in Bugzilla to make sure it gets considered for inclusion.**
 * [Missed Uplifts](buglist/?channel=beta&query=missed)
     - Bugs approved for Beta uplift that were missed
 
+
+## Thunderbird 128.x
+
+* [Uplifts Requested](buglist/?channel=esr128&query=uplifts-requested)
+* [Uplifts Approved](buglist/?channel=esr128&query=uplifts-approved)
+* [Affected](buglist/?channel=esr128&query=affected)
+* [Missed Uplifts](buglist/?channel=esr128&query=missed)
 
 ## Thunderbird 115.x
 
