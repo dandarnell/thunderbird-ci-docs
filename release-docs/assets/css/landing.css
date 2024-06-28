@@ -99,8 +99,12 @@ header h2 {
 
 .channel {
     display: flex;
-    padding: 1.5vmax;
+    padding: 1em;
     flex-direction: row;
+}
+
+.channel.hide {
+    padding: 0;
 }
 
 .channel .release {

@@ -10,17 +10,6 @@ function Landing() {
     const calKey = "AIzaSyD03H3uW38Q1GGtWADDy0lsJxxJN7luRBU"
     const RELEASE_URL = `https://www.googleapis.com/calendar/v3/calendars/${calId}/events?key=${calKey}&orderBy=startTime&singleEvents=true&timeZone=UTC`
 
-    function capitalizeFirstLetter(val) {
-        return val.charAt(0).toUpperCase() + val.slice(1)
-    }
-
-    function channel2ReleaseName(channel) {
-        if (channel === "nightly") {
-            return "Daily"
-        } else {
-            return capitalizeFirstLetter(channel)
-        }
-    }
 
     function getDateRange() {
         let start = new Date()
@@ -32,12 +21,17 @@ function Landing() {
     }
 
     function updateUI(released_versions) {
+        const SKIP = ["release", "esrnext"]
         for (let [channel, version] of Object.entries(released_versions)) {
             const div = document.getElementById(channel)
+            if (SKIP.indexOf(channel) > -1) {
+                div.classList.add("hide")
+                continue
+            }
             let inner = new DocumentFragment()
             let span = document.createElement("span")
             span.classList.add("release")
-            span.textContent = channel2ReleaseName(channel)
+            span.textContent = channelNames[channel]
 
             let a = document.createElement("a")
             a.href = `dashboard/#pollbot/thunderbird/${channel}`
@@ -105,6 +99,7 @@ function Landing() {
     }
 
     const versions = new ThunderbirdProductDetails()
+    const channelNames = versions.channelNames
 
     versions.productVersions()
         .then((v) => {

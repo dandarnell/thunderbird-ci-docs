@@ -13,12 +13,27 @@ export class ThunderbirdProductDetails {
             nightly: "LATEST_THUNDERBIRD_NIGHTLY_VERSION",
             beta: "LATEST_THUNDERBIRD_DEVEL_VERSION",
             release: "LATEST_THUNDERBIRD_VERSION",
+            esr: "THUNDERBIRD_ESR",
+            esrnext: "THUNDERBIRD_ESR_NEXT"
         }
         this._versions = {
             nightly: undefined,
             beta: undefined,
             release: undefined,
+            esr: undefined,
+            esrnext: undefined
         }
+        this._names = {
+            nightly: "Daily",
+            beta: "Beta",
+            release: "Monthly",
+            esr: "ESR",
+            esrnext: "ESR Next"
+        }
+    }
+
+    get channelNames() {
+        return this._names
     }
 
     /**
