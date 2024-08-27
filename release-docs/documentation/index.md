@@ -16,7 +16,8 @@ ready, and every 4 weeks a new beta version.
 
 The active team that is primarily responsible for Thunderbird releases is:
 
-* Wayne Mery (:wsmwk, Release Manager)
+* Corey Bryant (:coreycb, Release Manager)
+* Wayne Mery (:wsmwk, Release Manager Emeritus)
 * Rob Lemley (:rjl, Release Engineer)
 * Daniel Darnell (:dandarnell, Release Engineer)
 
@@ -27,3 +28,6 @@ who are responsible for producing distributed builds of Thunderbird, primarily
 Linux distributions, so that they are advised as to build and release progress,
 timing and issues.
 
+# Notes about Monthly Releases
+
+Some notes about [monthly releases](monthly/).

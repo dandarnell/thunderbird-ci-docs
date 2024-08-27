@@ -1,0 +1,24 @@
+
+# HG changeset patch
+# User Rob Lemley <rob@thunderbird.net>
+# Date 1722880449 14400
+# Node ID 99007ed6499a2d7fd2263932fbf6486ec47ae77d
+# Parent  676250c01912f3ebea3979c79456264689603477
+No Bug - Designate as release-candidate via start page. rs+a=me
+
+diff --git a/mail/branding/include/release-prefs.js b/mail/branding/include/release-prefs.js
+--- a/mail/branding/include/release-prefs.js
++++ b/mail/branding/include/release-prefs.js
+@@ -1,10 +1,10 @@
+ // Default start page
+-pref("mailnews.start_page.url", "https://live.thunderbird.net/%APP%/start?locale=%LOCALE%&version=%VERSION%&channel=%CHANNEL%&os=%OS%&buildid=%APPBUILDID%");
++pref("mailnews.start_page.url", "https://start.thunderbird.net/%LOCALE%/monthly/?locale=%LOCALE%&version=%VERSION%&channel=%CHANNEL%&os=%OS%&buildid=%APPBUILDID%");
+ 
+ // Start page override to load after an update. Balrog will set an appropriate
+ // url for this, see whats_new_page.yml
+ pref("mailnews.start_page.override_url", "");
+ 
+ // Interval: Time between checks for a new version (in seconds)
+ // nightly=8 hours, official=24 hours
+ pref("app.update.interval", 86400);
+
