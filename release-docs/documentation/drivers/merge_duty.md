@@ -185,8 +185,8 @@ push: true
 
    Click the first HG revision link (left side under date and timestamp) for the merge push to verify this.
 
-2. Verify that `mail/locales/l10n-changesets.json` has revisions, not
-   `default`.
+2. Verify that `mail/locales/l10n-changesets.json` has revisions.
+
 3. At the same time `comm-central` should get a new tag `BETA_xxx_BASE`
 
 !!! warning
@@ -215,6 +215,9 @@ to its previous state (`approval-required`) so that **l10n bumper can run**.
 cycle and bump versions in `comm-central`.
 
 1. Follow the [general steps](#general-steps)
+2. Run the `comm-bump-central` [no-op trial
+   run](#do-migration-no-op-trial-runs) again and verify the diff looks
+   correct.
 2. Insert the following payload and click submit.
 
 ```yaml

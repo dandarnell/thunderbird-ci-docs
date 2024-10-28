@@ -65,10 +65,6 @@ comm-central:
 
   * **TREEHERDER LINKS (2)**
 
-shipit:
-
-  * **SHIPIT PULL REQUEST LINK**
-
 documentation:
 
   * No changes
