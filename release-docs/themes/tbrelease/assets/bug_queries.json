@@ -756,19 +756,24 @@
               "Server Software",
               "Other"
             ],
-            "f1": "target_milestone",
+            "f1": "longdesc",
             "f2": "flagtypes.name",
             "f3": "cf_status_thunderbird_%CHANNEL%",
-            "o1": "anywords",
+            "o1": "substring",
             "o2": "substring",
             "o3": "nowords",
+            "resolution": [
+              "---",
+              "FIXED",
+              "DUPLICATE"
+            ],
             "product": [
               "Calendar",
               "Chat Core",
               "MailNews Core",
               "Thunderbird"
             ],
-            "v1": "%NEXT_MILESTONE%",
+            "v1": "approved for release",
             "v2": "approval-comm-release+",
             "v3": "fixed verified"
           }
